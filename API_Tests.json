@@ -1,0 +1,348 @@
+{
+  "info": {
+    "_postman_id": "ab7eb096-386c-4110-9fb0-12f22271ea12",
+    "name": "Automation Exercise API Tests",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "54554043",
+    "_collection_link": "https://go.postman.co/collection/54554043-ab7eb096-386c-4110-9fb0-12f22271ea12?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "TC_API_001 - Get All Products",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://automationexercise.com/api/productsList",
+          "protocol": "https",
+          "host": [
+            "automationexercise",
+            "com"
+          ],
+          "path": [
+            "api",
+            "productsList"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "TC_API_002 — POST to Products List (not supported)",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "https://automationexercise.com/api/productsList",
+          "protocol": "https",
+          "host": [
+            "automationexercise",
+            "com"
+          ],
+          "path": [
+            "api",
+            "productsList"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "TC_API_003 — Get All Brands",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://automationexercise.com/api/brandsList",
+          "protocol": "https",
+          "host": [
+            "automationexercise",
+            "com"
+          ],
+          "path": [
+            "api",
+            "brandsList"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "TC_API_004 — PUT Brands List (not supported)",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "url": {
+          "raw": "https://automationexercise.com/api/brandsList",
+          "protocol": "https",
+          "host": [
+            "automationexercise",
+            "com"
+          ],
+          "path": [
+            "api",
+            "brandsList"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "TC_API_005 — Search Product with valid name",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "search_product",
+              "value": "dress",
+              "type": "text",
+              "uuid": "430c7b2b-edcf-4358-b161-5794bec15935"
+            }
+          ]
+        },
+        "url": {
+          "raw": "https://automationexercise.com/api/searchProduct",
+          "protocol": "https",
+          "host": [
+            "automationexercise",
+            "com"
+          ],
+          "path": [
+            "api",
+            "searchProduct"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "TC_API_006 — Search Product without parameter",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": []
+        },
+        "url": {
+          "raw": "https://automationexercise.com/api/searchProduct",
+          "protocol": "https",
+          "host": [
+            "automationexercise",
+            "com"
+          ],
+          "path": [
+            "api",
+            "searchProduct"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "TC_API_007 — Login with valid credentials",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "email",
+              "value": "your registered email",
+              "type": "text",
+              "uuid": "be23cdf7-ef6b-483d-9803-497732038833"
+            },
+            {
+              "key": "password",
+              "value": "your password",
+              "type": "text",
+              "uuid": "87146309-a1ab-43a4-bd4c-ab3e4611b065"
+            }
+          ]
+        },
+        "url": {
+          "raw": "https://automationexercise.com/api/verifyLogin",
+          "protocol": "https",
+          "host": [
+            "automationexercise",
+            "com"
+          ],
+          "path": [
+            "api",
+            "verifyLogin"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "TC_API_008 — Login with invalid credentials",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "email",
+              "value": "fake@fake.com",
+              "type": "text",
+              "uuid": "ec7c0aad-b247-417c-ace1-7b36c79bebcc"
+            },
+            {
+              "key": "password",
+              "value": "wrongpass",
+              "type": "text",
+              "uuid": "b8dcbadd-6d15-4faf-92dd-2fa2157f0e8f"
+            }
+          ]
+        },
+        "url": {
+          "raw": "https://automationexercise.com/api/verifyLogin\n",
+          "protocol": "https",
+          "host": [
+            "automationexercise",
+            "com"
+          ],
+          "path": [
+            "api",
+            "verifyLogin\n"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "TC_API_009 — Create Account",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "name",
+              "value": "Hafsa Test",
+              "type": "text",
+              "uuid": "4f012ca0-245b-48c7-9481-7582edf3a074"
+            },
+            {
+              "key": "email",
+              "value": "newtestapi@gmail.com",
+              "type": "text",
+              "uuid": "85d38ce1-0b80-4700-819e-4f2f4004a23e"
+            },
+            {
+              "key": "password",
+              "value": "test123",
+              "type": "text",
+              "uuid": "e0cbc182-04aa-4a74-a6dd-b90f16391e9c"
+            },
+            {
+              "key": "firstname",
+              "value": "Hafsa",
+              "type": "text",
+              "uuid": "116c723b-8b33-4d52-91e5-ea4b53a91064"
+            },
+            {
+              "key": "lastname",
+              "value": "Test",
+              "type": "text",
+              "uuid": "58eee4b2-84b5-445d-b840-7a9efa77fc14"
+            },
+            {
+              "key": "address1",
+              "value": "123 test Street",
+              "type": "text",
+              "uuid": "e991491c-919b-4693-8919-8108067ed323"
+            },
+            {
+              "key": "city",
+              "value": "Islamabad",
+              "type": "text",
+              "uuid": "8adbdb1c-70f1-47d3-8740-51a3490bed8a"
+            },
+            {
+              "key": "zipcode",
+              "value": "44000",
+              "type": "text",
+              "uuid": "6840a988-0bff-4344-9b9d-9423b02268bc"
+            },
+            {
+              "key": "country",
+              "value": "Pakistan",
+              "type": "text",
+              "uuid": "e8f8b492-06ff-4d8a-9ff3-a4c3486e7ac4"
+            },
+            {
+              "key": "mobile_number",
+              "value": "03001234567",
+              "type": "text",
+              "uuid": "f8fbcb44-f6f6-4b03-9885-57e332032c1e"
+            },
+            {
+              "key": "state",
+              "value": "punjab",
+              "type": "text",
+              "uuid": "f7199bd0-2205-4468-81ee-1ae152c60b0a"
+            }
+          ]
+        },
+        "url": {
+          "raw": "https://automationexercise.com/api/createAccount",
+          "protocol": "https",
+          "host": [
+            "automationexercise",
+            "com"
+          ],
+          "path": [
+            "api",
+            "createAccount"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "TC_API_010 — Delete Account",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "email",
+              "value": "newtestapi@gmail.com",
+              "type": "text",
+              "uuid": "18c2534b-b38e-4555-adda-4c1d31b6bf33"
+            },
+            {
+              "key": "password",
+              "value": "test123",
+              "type": "text",
+              "uuid": "b41719b0-5a62-4373-b285-a7ad20d74314"
+            }
+          ]
+        },
+        "url": {
+          "raw": "https://automationexercise.com/api/deleteAccount",
+          "protocol": "https",
+          "host": [
+            "automationexercise",
+            "com"
+          ],
+          "path": [
+            "api",
+            "deleteAccount"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
